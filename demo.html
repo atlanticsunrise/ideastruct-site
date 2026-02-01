@@ -18,13 +18,28 @@
     <a href="about.html">About</a>
   </nav>
 
-  <div style="margin-top:20px; width:100%; height:80vh;">
-    <iframe
-      src="https://atlanticsunrise.github.io/ideastruct-demo/"
-      style="width:100%; height:100%; border:none;"
-      title="IdeaStruct Agent">
-    </iframe>
-  </div>
+ <div id="root" style="margin-top:20px; width:100%; height:80vh;"></div>
+
+<script>
+  window.wxOConfiguration = {
+    orchestrationID: "e5dc528742a147c0b9762327345808d2_df0321d7-28f2-45dc-b4ad-de90e97b65e9",
+    hostURL: "https://eu-gb.watson-orchestrate.cloud.ibm.com",
+    rootElementID: "root",
+    deploymentPlatform: "ibmcloud",
+    crn: "crn:v1:bluemix:public:watsonx-orchestrate:eu-gb:a/e5dc528742a147c0b9762327345808d2:df0321d7-28f2-45dc-b4ad-de90e97b65e9::",
+    chatOptions: {
+      agentId: "21a34d89-61a8-45e6-aa15-2b9bb21c4df2",
+      agentEnvironmentId: "9ba8dc10-7225-44d2-b1d4-5ebc3f380b80"
+    }
+  };
+
+  const script = document.createElement("script");
+  script.src = "https://eu-gb.watson-orchestrate.cloud.ibm.com/wxochat/wxoLoader.js?embed=true";
+  script.onload = function () {
+    wxoLoader.init();
+  };
+  document.head.appendChild(script);
+</script>
 
 </body>
 </html>
